@@ -35,7 +35,7 @@ public class ProblemSet3 {
         // ps.grade();         // executes Exercise 5
         // ps.cards();         // executes Exercise 6
         // ps.leapYear();      // executes Exercise 7
-        ps.state();         // executes Exercise 8
+        // ps.state();         // executes Exercise 8
         ps.months();        // executes Exercise 9
         ps.salary();        // executes Exercise 10
 
@@ -454,7 +454,86 @@ public class ProblemSet3 {
 
     public void months() {
 
-    }
+      System.out.print("\nEnter a month: ");
+        String inputMonth = in.nextLine().toUpperCase();
+
+		switch (inputMonth) {
+
+			   case "JANUARY":
+			   case "JANU":
+			   case "JAN":
+		  System.out.println("\n31 days.");
+		  break;
+
+			   case "FEBRUARY":
+			   case "FEBR":
+			   case "FEB":
+		  System.out.println("\n28 or 29 days.");
+      break;
+
+			   case "MARCH":
+			   case "MARC":
+			   case "MAR":
+		  System.out.println("\n31 days.");
+		  break;
+
+			   case "APRIL":
+			   case "APRI":
+			   case "APR":
+		  System.out.println("\n30 days.");
+		  break;
+
+			   case "MAY":
+		  System.out.println("\n31 days.");
+		  break;
+
+			   case "JUNE":
+			   case "JUN":
+		  System.out.println("\n30 days.");
+	    break;
+
+			   case "JULY":
+			   case "JUL":
+	    System.out.println("\n31 days.");
+	    break;
+
+			   case "AUGUST":
+			   case "AUGU":
+			   case "AUG":
+	    System.out.println("\n31 days.");
+	    break;
+
+			   case "SEPTEMBER":
+			   case "SEPT":
+			   case "SEP":
+	    System.out.println("\n30 days.");
+	    break;
+
+			   case "OCTOBER":
+			   case "OCTO":
+			   case "OCT":
+	    System.out.println("\n31 days.");
+	    break;
+
+			   case "NOVEMBER":
+			   case "NOVE":
+			   case "NOV":
+	    System.out.println("\n30 days.");
+	    break;
+
+			   case "DECEMBER":
+			   case "DECE":
+			   case "DEC":
+	    System.out.println("\n31 days.");
+	    break;
+
+			   default:
+	    System.out.println("\nThat's not a valid month.");
+	    break;
+		}
+  }
+
+
 
     /*
      * Exercise 10.
