@@ -34,7 +34,7 @@ public class ProblemSet3 {
         // ps.gpa();           // executes Exercise 4
         // ps.grade();         // executes Exercise 5
         // ps.cards();         // executes Exercise 6
-        ps.leapYear();      // executes Exercise 7
+        // ps.leapYear();      // executes Exercise 7
         ps.state();         // executes Exercise 8
         ps.months();        // executes Exercise 9
         ps.salary();        // executes Exercise 10
@@ -399,7 +399,52 @@ public class ProblemSet3 {
 
     public void state() {
 
+      final int FAH_FREEZING_POINT = 32;
+      final int CEL_FREEZING_POINT = 0;
+      final int FAH_BOILING_POINT = 212;
+      final int CEL_BOILING_POINT = 100;
+
+      System.out.print("\nEnter a temperature: ");
+      double inputTemp = in.nextDouble();
+
+      System.out.print("Enter a scale: ");
+      in.nextLine();
+      String tempScale = in.nextLine();
+      tempScale = tempScale.toUpperCase();
+
+      String matterState = "";
+
+      if (tempScale.equals("F") || tempScale.equals("C")) {
+        if (tempScale.equals("F")) {
+          if (inputTemp <= FAH_FREEZING_POINT) {
+            matterState = "Solid.";
+
+          } else if (inputTemp > FAH_FREEZING_POINT && inputTemp < FAH_BOILING_POINT) {
+            matterState = "Liquid.";
+
+          } else if (inputTemp >= FAH_BOILING_POINT) {
+            matterState = "Gas.";
+          }
+
+        } else if (tempScale.equals("C")) {
+        if (inputTemp <= CEL_FREEZING_POINT) {
+          matterState = "Solid.";
+
+        } else if (inputTemp > CEL_FREEZING_POINT && inputTemp < CEL_BOILING_POINT) {
+          matterState = "Liquid.";
+
+        } else if (inputTemp >= CEL_BOILING_POINT) {
+          matterState = "Gas.";
+        }
+      }
+
+      System.out.println("\n" + matterState);
+
+    } else {
+      System.out.println("\nThat's not a valid scale.");
+
     }
+  }
 
     /*
      * Exercise 9.
