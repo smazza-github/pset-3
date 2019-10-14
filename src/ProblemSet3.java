@@ -51,7 +51,7 @@ public class ProblemSet3 {
     public void sign() {
 
       System.out.print("\nEnter an integer: ");
-      long integer = in.nextLong();
+      int integer = in.nextLong();
 
       if (integer > 0) {
         System.out.println("\nPositive. ");
@@ -72,6 +72,15 @@ public class ProblemSet3 {
 
     public void parity() {
 
+      System.out.print("\nEnter an integer: ");
+      int parityInteger = in.nextInt();
+
+       if (parityInteger % 2) == 0) {
+         System.out.println("\nEven.");
+
+       } else {
+         System.out.println("\nOdd.");
+       }
     }
 
     /*
