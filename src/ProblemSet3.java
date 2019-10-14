@@ -31,7 +31,7 @@ public class ProblemSet3 {
         // ps.sign();          // executes Exercise 1
         // ps.parity();        // executes Exercise 2
         // ps.ordered();       // executes Exercise 3
-        ps.gpa();           // executes Exercise 4
+        // ps.gpa();           // executes Exercise 4
         ps.grade();         // executes Exercise 5
         ps.cards();         // executes Exercise 6
         ps.leapYear();      // executes Exercise 7
@@ -216,6 +216,37 @@ public class ProblemSet3 {
 
     public void grade() {
 
+      final double HIGH_A = 100;
+      final double GRADE_A = 90;
+      final double GRADE_B = 80;
+      final double GRADE_C = 70;
+      final double GRADE_D = 60;
+      final double GRADE_F = 0;
+
+      System.out.print("\nEnter a grade: ");
+      double gradeValue = in.nextDouble();
+
+      if (gradeValue >= GRADE_A && gradeValue <= HIGH_A) {
+        System.out.println("\nYou recieved an A.");
+
+      } else if (gradeValue < GRADE_A && gradeValue >= GRADE_B) {
+        System.out.println("\nYou recieved a B.");
+
+      } else if (gradeValue < GRADE_B && gradeValue >= GRADE_C) {
+        System.out.println("\nYou recieved a C.");
+
+      } else if (gradeValue < GRADE_C && gradeValue >= GRADE_D) {
+        System.out.println("\nYou recieved a D.");
+
+      } else if (gradeValue < GRADE_D && gradeValue >= GRADE_F) {
+        System.out.println("\nYou recieved a F.");
+
+      } else if (gradeValue < GRADE_F) {
+        System.out.println("\nGrades below 0 are invalid.");
+
+      } else if (gradeValue > HIGH_A) {
+        System.out.println("\nGrades above 100 are invalid.");
+      }
     }
 
     /*
