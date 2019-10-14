@@ -36,7 +36,7 @@ public class ProblemSet3 {
         // ps.cards();         // executes Exercise 6
         // ps.leapYear();      // executes Exercise 7
         // ps.state();         // executes Exercise 8
-        ps.months();        // executes Exercise 9
+        // ps.months();        // executes Exercise 9
         ps.salary();        // executes Exercise 10
 
         in.close();
@@ -543,5 +543,37 @@ public class ProblemSet3 {
 
     public void salary() {
 
+      final double OVER_TIME_MULTIPLIER = 1.5;
+      final double OVER_TIME_AMOUNT = 40;
+
+      double paycheck;
+      double overTimeHours;
+
+      System.out.print("\nWage: ");
+      double wage = in.nextDouble();
+
+      if (wage < 0.00) {
+        System.out.println("Your wage must be greater than or equal to $0.00/hour.");
+      }
+
+
+      System.out.print("Hours: ");
+      double workHours = in.nextDouble();
+
+      if (workHours < 0.0) {
+        System.out.println("Your hours must be greater than or equal to 0.0");
+      }
+
+
+      if (workHours > OVER_TIME_AMOUNT) {
+        overTimeHours = workHours - OVER_TIME_AMOUNT;
+        paycheck = 40 * wage + overTimeHours * OVER_TIME_MULTIPLIER * wage;
+        System.out.printf("\nYou'll make $%,.2f this week.\n", paycheck);
+
+      } else {
+        paycheck = workHours * wage;
+        System.out.printf("\nYou'll make $%,.2f this week.\n", paycheck);
+
+      }
     }
 }
