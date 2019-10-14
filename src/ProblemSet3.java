@@ -33,7 +33,7 @@ public class ProblemSet3 {
         // ps.ordered();       // executes Exercise 3
         // ps.gpa();           // executes Exercise 4
         // ps.grade();         // executes Exercise 5
-        ps.cards();         // executes Exercise 6
+        // ps.cards();         // executes Exercise 6
         ps.leapYear();      // executes Exercise 7
         ps.state();         // executes Exercise 8
         ps.months();        // executes Exercise 9
@@ -363,6 +363,7 @@ public class ProblemSet3 {
 
 		if (validity ) {
 			System.out.printf("\n%s of %s.\n", cardRank, cardSuit);
+
 		}
 	}
 
@@ -374,6 +375,19 @@ public class ProblemSet3 {
 
     public void leapYear() {
 
+      System.out.print("\nEnter a year: ");
+      long leapYear = in.nextLong();
+
+      if (leapYear >=  0) {
+        if ((leapYear % 4 == 0) && ((leapYear % 100 != 0) || (leapYear % 400 == 0))) {
+          System.out.printf("\n%d is a leap year.", leapYear);
+          System.out.print("\n");
+
+        } else {
+          System.out.printf("\n%d is not a leap year.", leapYear);
+          System.out.print("\n");
+        }
+      }
     }
 
     /*
