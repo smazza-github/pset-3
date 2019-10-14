@@ -51,7 +51,7 @@ public class ProblemSet3 {
     public void sign() {
 
       System.out.print("\nEnter an integer: ");
-      int integer = in.nextLong();
+      int integer = in.nextInt();
 
       if (integer > 0) {
         System.out.println("\nPositive. ");
@@ -75,7 +75,7 @@ public class ProblemSet3 {
       System.out.print("\nEnter an integer: ");
       int parityInteger = in.nextInt();
 
-       if (parityInteger % 2) == 0) {
+       if ((parityInteger % 2) == 0) {
          System.out.println("\nEven.");
 
        } else {
@@ -91,6 +91,37 @@ public class ProblemSet3 {
 
     public void ordered() {
 
+      System.out.println("\nEnter three integers. ");
+
+
+      System.out.print("\nEnter integer: ");
+      int orderInt1 = in.nextInt();
+
+      System.out.print("Enter integer: ");
+      int orderInt2 = in.nextInt();
+
+      System.out.print("Enter integer: ");
+      int orderInt3 = in.nextInt();
+
+
+      if (orderInt1 == orderInt2 && orderInt2 == orderInt3) {
+        System.out.println("\nSame.");
+
+      } else if (orderInt1 < orderInt2 && orderInt2 < orderInt3) {
+        System.out.println("\nStrictly increasing.");
+
+      } else if (orderInt1 <= orderInt2 && orderInt2 <= orderInt3) {
+        System.out.println("\nIncreasing.");
+
+      } else if (orderInt1 > orderInt2 && orderInt2 > orderInt3) {
+        System.out.println("Strictly Decreasing. ");
+
+      } else if (orderInt1 >= orderInt2 && orderInt2 >= orderInt3) {
+        System.out.println("\nDecreasing.");
+
+      } else {
+        System.out.println("\nUnordered.");
+      }
     }
 
     /*
