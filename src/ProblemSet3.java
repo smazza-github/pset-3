@@ -32,7 +32,7 @@ public class ProblemSet3 {
         // ps.parity();        // executes Exercise 2
         // ps.ordered();       // executes Exercise 3
         // ps.gpa();           // executes Exercise 4
-        ps.grade();         // executes Exercise 5
+        // ps.grade();         // executes Exercise 5
         ps.cards();         // executes Exercise 6
         ps.leapYear();      // executes Exercise 7
         ps.state();         // executes Exercise 8
@@ -257,7 +257,114 @@ public class ProblemSet3 {
 
     public void cards() {
 
-    }
+    System.out.print("\nEnter a card: ");
+
+		String card = in.nextLine().toUpperCase();
+		String cardSuit = card.substring(1);
+		String cardRank = card.substring(0, 1);
+
+		boolean validity  = false;
+
+		switch (cardRank) {
+
+			case "2":
+				cardRank = "Two";
+				validity = true;
+				break;
+
+			case "3":
+				cardRank = "Three";
+				validity = true;
+				break;
+
+			case "4":
+				cardRank = "Four";
+				validity = true;
+				break;
+
+			case "5":
+				cardRank = "Five";
+				validity = true;
+				break;
+
+			case "6":
+				cardRank = "Six";
+				validity = true;
+				break;
+
+			case "7":
+				cardRank = "Seven";
+				validity = true;
+				break;
+
+			case "8":
+				cardRank = "Eight";
+				validity = true;
+				break;
+
+			case "9":
+				cardRank = "Nine";
+				validity = true;
+				break;
+
+			case "T":
+				cardRank = "Ten";
+				validity = true;
+				break;
+
+			case "J":
+				cardRank = "Jack";
+				validity = true;
+				break;
+
+			case "Q":
+				cardRank = "Queen";
+				validity = true;
+				break;
+
+			case "K":
+				cardRank = "King";
+				validity = true;
+				break;
+
+			case "A":
+				cardRank = "Ace";
+				validity = true;
+				break;
+
+			default:
+				System.out.println("\nThat's not a valid rank.\n");
+				validity  = false;
+		}
+
+		if (validity ) {
+			switch (cardSuit) {
+				case "C":
+					cardSuit = "Clubs";
+					break;
+
+				case "D":
+					cardSuit = "Diamonds";
+					break;
+
+				case "H":
+					cardSuit = "Hearts";
+					break;
+
+				case "S":
+					cardSuit = "Spades";
+					break;
+
+				default:
+					System.out.print("That's not a valid suit.");
+					validity  = false;
+			}
+		}
+
+		if (validity ) {
+			System.out.printf("\n%s of %s.\n", cardRank, cardSuit);
+		}
+	}
 
     /*
      * Exercise 7.
