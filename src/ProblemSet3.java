@@ -28,9 +28,9 @@ public class ProblemSet3 {
 
         // comment out or uncomment as needed
 
-        ps.sign();          // executes Exercise 1
-        ps.parity();        // executes Exercise 2
-        ps.ordered();       // executes Exercise 3
+        // ps.sign();          // executes Exercise 1
+        // ps.parity();        // executes Exercise 2
+        // ps.ordered();       // executes Exercise 3
         ps.gpa();           // executes Exercise 4
         ps.grade();         // executes Exercise 5
         ps.cards();         // executes Exercise 6
@@ -132,6 +132,80 @@ public class ProblemSet3 {
 
     public void gpa() {
 
+      final double A_GRADE = 4.00;
+      final double B_GRADE = 3.00;
+      final double C_GRADE = 2.00;
+      final double D_GRADE = 1.00;
+      final double F_GRADE = 0.00;
+
+      final double PLUS_SIGN = 0.33;
+      final double MINUS_SIGN = -0.33;
+
+      double gpa = 0.00;
+
+
+      System.out.print("\nEnter a letter grade: ");
+      String gradeLetter = in.nextLine().toUpperCase();
+
+
+      if (gradeLetter.equals("A") || gradeLetter.equals("A+")) {
+        gpa += A_GRADE;
+        System.out.printf("\nYour GPA is %.2f.\n", gpa);
+
+      } else if (gradeLetter.equals("A-")) {
+        gpa += B_GRADE;
+        gpa += MINUS_SIGN;
+        System.out.printf("\nYour GPA is %.2f.\n", gpa);
+
+      } else if (gradeLetter.equals("B+")) {
+        gpa += B_GRADE;
+        gpa += PLUS_SIGN;
+        System.out.printf("\nYour GPA is %.2f.\n", gpa);
+
+      } else if (gradeLetter.equals("B")) {
+        gpa += B_GRADE;
+        System.out.printf("\nYour GPA is %.2f.\n", gpa);
+
+      } else if (gradeLetter.equals("B-")) {
+        gpa += B_GRADE;
+        gpa += MINUS_SIGN;
+        System.out.printf("\nYour GPA is %.2f.\n", gpa);
+
+      } else if (gradeLetter.equals("C+")) {
+        gpa += C_GRADE;
+        gpa += PLUS_SIGN;
+        System.out.printf("\nYour GPA is %.2f.\n", gpa);
+
+      } else if (gradeLetter.equals("C")) {
+        gpa += C_GRADE;
+        System.out.printf("\nYour GPA is %.2f.\n", gpa);
+
+      } else if (gradeLetter.equals("C-")) {
+        gpa += C_GRADE;
+        gpa += MINUS_SIGN;
+        System.out.printf("\nYour GPA is %.2f.\n", gpa);
+
+      } else if (gradeLetter.equals("D+")) {
+        gpa += D_GRADE;
+        gpa += PLUS_SIGN;
+        System.out.printf("\nYour GPA is %.2f.\n", gpa);
+
+      } else if (gradeLetter.equals("D")) {
+        gpa += D_GRADE;
+        System.out.printf("\nYour GPA is %.2f.\n", gpa);
+
+      } else if (gradeLetter.equals("D-")) {
+        gpa += D_GRADE;
+        gpa += MINUS_SIGN;
+        System.out.printf("\nYour GPA is %.2f.\n", gpa);
+
+      } else if (gradeLetter.equals("F")) {
+        gpa += F_GRADE;
+        System.out.printf("\nYour GPA is %.2f.\n", gpa);
+
+      } else {
+        System.out.println("\nThat's not a valid letter grade.");
+      }
     }
 
     /*
