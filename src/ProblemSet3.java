@@ -28,15 +28,15 @@ public class ProblemSet3 {
 
         // comment out or uncomment as needed
 
-        // ps.sign();          // executes Exercise 1
-        // ps.parity();        // executes Exercise 2
-        // ps.ordered();       // executes Exercise 3
-        // ps.gpa();           // executes Exercise 4
-        // ps.grade();         // executes Exercise 5
-        // ps.cards();         // executes Exercise 6
-        // ps.leapYear();      // executes Exercise 7
-        // ps.state();         // executes Exercise 8
-        // ps.months();        // executes Exercise 9
+        ps.sign();          // executes Exercise 1
+        ps.parity();        // executes Exercise 2
+        ps.ordered();       // executes Exercise 3
+        ps.gpa();           // executes Exercise 4
+        ps.grade();         // executes Exercise 5
+        ps.cards();         // executes Exercise 6
+        ps.leapYear();      // executes Exercise 7
+        ps.state();         // executes Exercise 8
+        ps.months();        // executes Exercise 9
         ps.salary();        // executes Exercise 10
 
         in.close();
@@ -145,8 +145,8 @@ public class ProblemSet3 {
 
 
       System.out.print("\nEnter a letter grade: ");
+      in.nextLine();
       String gradeLetter = in.nextLine().toUpperCase();
-
 
       if (gradeLetter.equals("A") || gradeLetter.equals("A+")) {
         gpa += A_GRADE;
@@ -258,6 +258,7 @@ public class ProblemSet3 {
     public void cards() {
 
     System.out.print("\nEnter a card: ");
+    in.nextLine();
 
 		String card = in.nextLine().toUpperCase();
 		String cardSuit = card.substring(1);
